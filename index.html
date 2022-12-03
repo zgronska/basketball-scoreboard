@@ -6,25 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basketball scoreboard</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
   </head>
   <body>
     <div class="board home">
       <h2>Home</h2>
-      <div class="score"><span>0</span></div>
+      <div class="score-board">
+        <span class="result" id="home-result">0</span>
+      </div>
       <div class="nav">
-        <button class="nav-item">+1</button>
-        <button class="nav-item">+2</button>
-        <button class="nav-item">+3</button>
+        <button class="nav-item one" onclick="homeOnePoint()">+1</button>
+        <button class="nav-item two" onclick="homeTwoPoints()">+2</button>
+        <button class="nav-item three" onclick="homeThreePoints()">+3</button>
       </div>
     </div>
     <div class="board guest">
       <h2>Guest</h2>
-      <div class="score"><span>0</span></div>
+      <div class="score-board">
+        <span class="result" id="guest-result">0</span>
+      </div>
       <div class="nav">
-        <button class="nav-item">+1</button>
-        <button class="nav-item">+2</button>
-        <button class="nav-item">+3</button>
+        <button class="nav-item one" onclick="onePoint()">+1</button>
+        <button class="nav-item two" onclick="twoPoints()">+2</button>
+        <button class="nav-item three" onclick="threePoints()">+3</button>
       </div>
     </div>
   </body>

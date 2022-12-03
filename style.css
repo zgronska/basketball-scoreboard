@@ -88,7 +88,7 @@ h2 {
     font-size: 2rem;
 }
 
-.score {
+.score-board {
     background: var(--black);
     border-radius: 10%;
     margin: 1rem auto;
@@ -96,7 +96,7 @@ h2 {
     min-height: 6rem;
 }
 
-.score > span {
+.score-board > .result {
     color: var(--pink);
     font-size: 4.5rem;
 }
