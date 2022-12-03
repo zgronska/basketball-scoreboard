@@ -6,30 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basketball scoreboard</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" type="module"></script>
   </head>
   <body>
-    <div class="board home">
-      <h2>Home</h2>
-      <div class="score-board">
-        <span class="result" id="home-result">0</span>
+    <div class="container">
+      <div class="board home">
+        <h3>Home</h3>
+        <div class="score-board">
+          <span class="result" id="home-result">0</span>
+        </div>
+        <div class="nav">
+          <button class="btn point-btn" id="home-one">+1</button>
+          <button class="btn point-btn" id="home-two">+2</button>
+          <button class="btn point-btn" id="home-three">+3</button>
+        </div>
       </div>
-      <div class="nav">
-        <button class="nav-item one" onclick="homeOnePoint()">+1</button>
-        <button class="nav-item two" onclick="homeTwoPoints()">+2</button>
-        <button class="nav-item three" onclick="homeThreePoints()">+3</button>
+      <div class="board guest">
+        <h3>Guest</h3>
+        <div class="score-board">
+          <span class="result" id="guest-result">0</span>
+        </div>
+        <div class="nav">
+          <button class="btn point-btn" id="guest-one">+1</button>
+          <button class="btn point-btn" id="guest-two">+2</button>
+          <button class="btn point-btn" id="guest-three">+3</button>
+        </div>
       </div>
     </div>
-    <div class="board guest">
-      <h2>Guest</h2>
-      <div class="score-board">
-        <span class="result" id="guest-result">0</span>
-      </div>
-      <div class="nav">
-        <button class="nav-item one" onclick="onePoint()">+1</button>
-        <button class="nav-item two" onclick="twoPoints()">+2</button>
-        <button class="nav-item three" onclick="threePoints()">+3</button>
-      </div>
-    </div>
+    <h4>
+      Time remaining:
+      <span id="time">40:00</span>
+    </h4>
+    <button class="reset-btn btn" id="reset-btn">New game</button>
+    <script src="index.js"></script>
   </body>
 </html>
+
+<!-- <span id="minutes"></span>:<span id="seconds"></span
+  > -->
