@@ -1,0 +1,118 @@
+@import url('https://fonts.cdnfonts.com/css/cursed-timer-ulil');
+
+:root {
+    --darkblue: #1B244A;
+    --pink: #F94F6D;
+    --white: #EEEEEE;
+    --black: #080001;
+    --lightblue: #9AABD8;
+    font-size: 20px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+body {
+    background: var(--darkblue);
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+h2 {
+    font-family: 'Verdana', sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.score {
+    background: var(--black);
+    border-radius: 10%;
+    margin: 1rem auto;
+    min-width: 7.75rem;
+    min-height: 6rem;
+}
+
+.score > span {
+    color: var(--pink);
+    font-size: 4.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    border: 0.1rem solid var(--lightblue);
+    background: transparent;
+    border-radius: 10%;
+    color: var(--lightblue);
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
