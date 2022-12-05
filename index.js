@@ -8,6 +8,11 @@ let guestScore = 0;
 let homeResult = document.getElementById("home-result");
 let guestResult = document.getElementById("guest-result");
 
+// timer
+
+let elMinutes = document.querySelector("#minutes");
+let elSeconds = document.querySelector("#seconds");
+
 // buttons
 
 let homeOneBtn = document.getElementById("home-one");
@@ -19,6 +24,7 @@ let guestTwoBtn = document.getElementById("guest-two");
 let guestThreeBtn = document.getElementById("guest-three");
 
 let resetBtn = document.querySelector(".btn-reset");
+let control = document.querySelector(".btn-control");
 
 // WINNER HIGHLIGHT
 
@@ -77,10 +83,6 @@ guestThreeBtn.addEventListener("click", function () {
 
 // TIMER FUNCTION
 
-let elMinutes = document.querySelector("#minutes");
-let elSeconds = document.querySelector("#seconds");
-let control = document.querySelector(".btn-control");
-
 let interval;
 let remainingSeconds = 2400;
 
@@ -129,6 +131,7 @@ function start() {
 
     if (remainingSeconds === 0) {
       stop();
+      winner();
     }
   }, 1000);
 
@@ -143,6 +146,21 @@ function stop() {
   interval = null;
 
   updateInterfaceControls();
+  remainingSeconds = 2400;
+  elMinutes.innerHTML = "40";
+  elSeconds.innerHTML = "00";
+}
+
+// DECLARE WINNER FUNCTION
+
+function winner() {
+  if (homeScore > guestScore) {
+    alert("Home team wins!");
+  } else if (guestScore > homeScore) {
+    alert("Guest team wins!");
+  } else if (guestScore === homeScore) {
+    alert("It's a tie!");
+  }
 }
 
 // RESET FUNCTION
@@ -153,9 +171,7 @@ function resetGame() {
   homeResult.innerText = homeScore;
   guestResult.innerText = guestScore;
   stop();
-  remainingSeconds = 2400;
-  elMinutes.innerHTML = "40";
-  elSeconds.innerHTML = "00";
+
   homeResult.style.backgroundColor = "var(--black)";
   guestResult.style.backgroundColor = "var(--black)";
 }
