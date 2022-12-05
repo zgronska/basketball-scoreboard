@@ -20,8 +20,20 @@ let guestThreeBtn = document.getElementById("guest-three");
 
 let resetBtn = document.querySelector(".btn-reset");
 
-// let resetBtn = document.getElementById("reset-btn");
-// let controlBtn = document.getElementById("control-btn");
+// WINNER HIGHLIGHT
+
+function winnerColour() {
+  if (homeScore === guestScore) {
+    homeResult.style.backgroundColor = "var(--black)";
+    guestResult.style.backgroundColor = "var(--black)";
+  } else if (homeScore > guestScore) {
+    homeResult.style.backgroundColor = "var(--green)";
+    guestResult.style.backgroundColor = "var(--black)";
+  } else {
+    homeResult.style.backgroundColor = "var(--black)";
+    guestResult.style.backgroundColor = "var(--green)";
+  }
+}
 
 // SCORE FUNCTION
 
@@ -29,9 +41,11 @@ function addScore(points, team) {
   if (team === "home") {
     homeScore += points;
     homeResult.innerText = homeScore;
+    winnerColour();
   } else if (team === "guest") {
     guestScore += points;
     guestResult.innerText = guestScore;
+    winnerColour();
   } else {
     console.log("error");
   }
@@ -142,13 +156,8 @@ function resetGame() {
   remainingSeconds = 2400;
   elMinutes.innerHTML = "40";
   elSeconds.innerHTML = "00";
+  homeResult.style.backgroundColor = "var(--black)";
+  guestResult.style.backgroundColor = "var(--black)";
 }
 
 resetBtn.addEventListener("click", resetGame);
-
-// WINNER HIGHLIGHT
-
-if (homeScore > guestScore) {
-  document.querySelector("#home-result").style.backgroundColor = "red";
-} else {
-}
