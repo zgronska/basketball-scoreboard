@@ -83,7 +83,7 @@ guestThreeBtn.addEventListener("click", function () {
 
 // TIMER FUNCTION
 
-let interval;
+let interval = null;
 let remainingSeconds = 2400;
 
 control.addEventListener("click", () => {
