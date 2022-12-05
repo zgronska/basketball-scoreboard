@@ -18,7 +18,7 @@
 
 * {
     margin: 0;
-
+    /* border: 1px solid red */
 }
 
 html,
@@ -74,6 +74,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    text-align: center;
 }
 
 .container {
@@ -100,11 +101,7 @@ h3 {
 }
 
 .score-board {
-    background: var(--black);
-    border-radius: 10%;
     margin: 1rem auto;
-    min-width: 6.75rem;
-    min-height: 6rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -113,9 +110,12 @@ h3 {
 
 .score-board > .result {
     color: var(--pink);
+    border-radius: 10%;
+    min-width: 6.75rem;
+    min-height: 6rem;
     font-size: 4.5rem;
     padding: 0 0.5rem;
-
+    background: var(--black);
 }
 
 .nav {
@@ -128,7 +128,7 @@ h3 {
 .btn {
     border: 0.1rem solid var(--lightblue);
     background: transparent;
-    border-radius: 10%;
+
     color: var(--lightblue);
     font-size: 0.9rem;
     cursor: pointer;
@@ -148,11 +148,9 @@ h3 {
     display: inline-block;
     width: 2.25rem;
     height: 2.25rem;
+    border-radius: 0.5rem;
 }
 
-.reset-btn {
-    padding: 0.5rem;
-}
 
 #time {
     font-family: 'Cursed Timer ULiL', sans-serif;
@@ -160,5 +158,21 @@ h3 {
     background: var(--lightblue);
     color: var(--darkestblue);
     padding: 0.5rem;
-    border-radius: 10%;
+    border-radius: 0.5rem;
+}
+
+.control-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+.btn-reset,
+.btn-control {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    gap: 0.5rem;
 }

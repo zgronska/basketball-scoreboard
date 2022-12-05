@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basketball scoreboard</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
   </head>
   <body>
     <div class="container">
@@ -32,14 +35,21 @@
         </div>
       </div>
     </div>
+
     <h4>
       Time remaining:
-      <span id="time">40:00</span>
+      <span id="time"
+        ><span id="minutes">00</span>:<span id="seconds">00</span></span
+      >
     </h4>
-    <button class="reset-btn btn" id="reset-btn">New game</button>
+    <div class="control-btns">
+      <button class="btn btn-start btn-control">
+        <span class="material-icons"> play_arrow </span>Start game
+      </button>
+      <button class="btn btn-reset">
+        <span class="material-icons"> restart_alt </span>Reset game
+      </button>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
-
-<!-- <span id="minutes"></span>:<span id="seconds"></span
-  > -->
