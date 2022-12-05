@@ -146,9 +146,6 @@ function stop() {
   interval = null;
 
   updateInterfaceControls();
-  remainingSeconds = 2400;
-  elMinutes.innerHTML = "40";
-  elSeconds.innerHTML = "00";
 }
 
 // DECLARE WINNER FUNCTION
@@ -171,7 +168,9 @@ function resetGame() {
   homeResult.innerText = homeScore;
   guestResult.innerText = guestScore;
   stop();
-
+  remainingSeconds = 2400;
+  elMinutes.innerHTML = "40";
+  elSeconds.innerHTML = "00";
   homeResult.style.backgroundColor = "var(--black)";
   guestResult.style.backgroundColor = "var(--black)";
 }
