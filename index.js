@@ -1,5 +1,3 @@
-// HTML LINK
-
 // scores
 
 let homeScore = 0;
